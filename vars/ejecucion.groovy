@@ -19,16 +19,16 @@ def call(){
                         if (params.stage == ''){
                             println 'INICIO'
                             //params.eleccion.call()
-                            printls 'FIN'
+                            println 'FIN'
                         }
 
-                        
+                      /*  
                         if (params.eleccion == 'gradle'){
                             gradle.call()
                         } else{
                             maven.call()
                         }
-                    
+                    */
                     }
                 }
             }
