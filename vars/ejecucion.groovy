@@ -4,7 +4,7 @@ def call(){
         agent any
         parameters { 
             choice(name: 'eleccion', choices: ['gradle', 'maven'], description: 'Invocacion ')
-            string(name: 'stage', defaultValue: 'prueba', description: 'Stage a ejecutar') 
+            string(name: 'stage', defaultValue: '', description: 'Stage a ejecutar') 
         }
             
 
@@ -14,13 +14,13 @@ def call(){
                     script{
 
                        // println 'Stage a ejecutar': + params.stage
-                        println 'Herramienta de ejecución:' + params.eleccion
+                        println 'Herramienta de ejecución: ' + params.eleccion
                         echo "Stage: ${params.stage}"
-                     //   if (params.stage == 'prueba'){
-                     //       println 'INICIO'
+                        if (${params.stage} == ''){
+                            println 'INICIO'
                      //       //params.eleccion.call()
-                     //       println 'FIN'
-                     //   }
+                            println 'FIN'
+                        }
 
                       /*  
                         if (params.eleccion == 'gradle'){
