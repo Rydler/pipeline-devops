@@ -18,7 +18,7 @@ def call(){
                         echo "Stage: ${params.stage}"
                         if (params.stage == '') {
                             println 'INICIO'
-                            println "${params.eleccion}."
+                            "${params.eleccion}.call()"
                             println 'FIN'
                         }
 
