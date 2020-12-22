@@ -9,8 +9,12 @@ def call(){
                 steps{
                     script{
                         println 'Herramienta de ejecución:' + params.CHOICES
-                        def eleccion = load "${params.CHOICES}.groovy"
-                        eleccion.call()
+                        
+                        if params.CHOICES == 'gradle'{
+                            gradle.call()
+                        } else{
+                            maven.call()
+                        }
                     }
                 }
             }
