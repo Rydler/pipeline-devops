@@ -16,7 +16,7 @@ def call(){
                        // println 'Stage a ejecutar': + params.stage
                         println 'Herramienta de ejecución: ' + params.eleccion
                         echo "Stage: ${params.stage}"
-                        if (${params.stage} == ''){
+                        if (params.stage == '') {
                             println 'INICIO'
                      //       //params.eleccion.call()
                             println 'FIN'
