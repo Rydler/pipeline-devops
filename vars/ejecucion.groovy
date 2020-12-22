@@ -18,7 +18,7 @@ def call(){
                         
                         if (params.stage == ''){
                             println 'INICIO'
-                            params.eleccion.call()
+                            //params.eleccion.call()
                             printls 'FIN'
                         }
 
