@@ -12,13 +12,23 @@ def call(){
             stage('Pipeline') {
                 steps{
                     script{
+
+                        println 'Stage a ejecutar': + params.stage
                         println 'Herramienta de ejecución:' + params.eleccion
                         
+                        if (params.stage == ''){
+                            println 'INICIO'
+                            params.eleccion.call()
+                            printls 'FIN'
+                        }
+
+                     /*   
                         if (params.eleccion == 'gradle'){
                             gradle.call()
                         } else{
                             maven.call()
                         }
+                    */
                     }
                 }
             }
