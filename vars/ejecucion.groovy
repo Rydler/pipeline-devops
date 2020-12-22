@@ -4,7 +4,7 @@ def call(){
         agent any
         parameters { 
             choice(name: 'eleccion', choices: ['gradle', 'maven'], description: 'Invocacion ')
-           // string(name: 'stage', defaultValue: 'prueba', description: 'Stage a ejecutar') 
+            string(name: 'stage', defaultValue: 'prueba', description: 'Stage a ejecutar') 
         }
             
 
