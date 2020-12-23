@@ -9,8 +9,8 @@ def call(){
     Out: Boolean
     */
 
-    def check = util.validarStages(validStage,arrayStage)
-    println check
+    //def check = util.validarStages(validStage,arrayStage)
+    //println check
 
 
     if ("${params.stage}" == ''){
