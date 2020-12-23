@@ -11,7 +11,7 @@ def call(){
 
         switch(values){
             case 'Build':
-            stage('Build & Test'){
+            stage('Build'){
                 sh './gradlew clean build'
             }
             break
