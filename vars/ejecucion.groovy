@@ -18,7 +18,7 @@ def call(){
                         println 'Herramienta de ejecución: ' + params.eleccion
                         echo "Stage: ${params.stage}"
 
-                        println params.stage
+                        println params.stage.split()
 
 
                         /*if (params.stage == '') {
