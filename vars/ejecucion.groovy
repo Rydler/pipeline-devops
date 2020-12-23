@@ -1,5 +1,6 @@
 def call(){
 
+    String[] = str;
     pipeline {
         agent any
         parameters { 
@@ -16,11 +17,18 @@ def call(){
                        // println 'Stage a ejecutar': + params.stage
                         println 'Herramienta de ejecución: ' + params.eleccion
                         echo "Stage: ${params.stage}"
-                        if (params.stage == '') {
+
+                        str = params.stage.split(';');
+                        for( String values : str )
+                        println(values);
+
+
+                        /*if (params.stage == '') {
                             println 'INICIO'
-                            "${params.eleccion}." + call()
+                            
                             println 'FIN'
                         }
+                        */
 
                       /*  
                         if (params.eleccion == 'gradle'){
