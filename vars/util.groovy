@@ -1,9 +1,15 @@
 
 def validarStages(validStage,arrayStage){
     
-    for (String values: validStage){
-        println(values) 
+    def aux = false
+    for (String validValues: validStage){
+        for (String values: arrayStage){
+            if values == validValues{
+                aux = true
+            }
+        }
     }
-    println 'Validando Stage en Util'
-    return true
+    return aux
 }
+
+
