@@ -7,10 +7,10 @@ def call(){
     def arrayStage =  params.stage.split(';')
 
     
-    if "${params.stage}" == ''{
+    if ("${params.stage}" == ''){
         println " VALOR: ${params.stage}" 
     }
-    
+
     for(String values : arrayStage){
 
 
