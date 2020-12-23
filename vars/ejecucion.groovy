@@ -18,8 +18,8 @@ def call(){
                         println 'Herramienta de ejecución: ' + params.eleccion
                         echo "Stage: ${params.stage}"
 
-                        println params.stage.split(';')
-
+                        def str =  params.stage.split(';')
+                        println str(1)
 
                         /*if (params.stage == '') {
                             println 'INICIO'
