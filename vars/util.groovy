@@ -3,11 +3,12 @@ def validarStages(validStage,arrayStage){
     
     def check = false
     def aux = 0
-
+    println(aux)
     for (String validValues: validStage){
         for (String values: arrayStage){
             if (values == validValues){
-                println "Prueba"
+                aux += 1
+                println(aux)
             }
         }
     }
