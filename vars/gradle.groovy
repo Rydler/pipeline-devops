@@ -9,7 +9,19 @@ def call(){
     for(String values : arrayStage){
         println 'IMPRIMIENDO'
 
+        switch(values){
+            case '':
+            println 'VACIO'
+            break
 
+            case 'esto':
+            println 'ESTO'
+            break
+
+            case 'es'
+            println 'ES'
+            break
+        }
     }
 
     stage('Prueba'){
