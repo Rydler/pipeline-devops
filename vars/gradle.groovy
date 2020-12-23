@@ -81,6 +81,9 @@ def call(){
             }
         }
     }
+    else{
+        error "Hay al menos un Stage no valido"
+    }
 }
 
 return this;
