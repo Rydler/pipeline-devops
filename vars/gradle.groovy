@@ -10,8 +10,6 @@ def call(){
     */
 
     def check = util.validarStages(validStage,arrayStage)
-    println check
-
 
     if ("${params.stage}" == ''){
 
