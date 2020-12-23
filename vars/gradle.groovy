@@ -40,7 +40,7 @@ def call(){
         }
     }
     
-    else{
+    else if (check == true){
 
         for(String values : arrayStage){
 
