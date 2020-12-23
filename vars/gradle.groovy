@@ -5,10 +5,15 @@ ejecucion.call()
 def call(){
 
     def arrayStage =  params.stage.split(';')
-    println str[0]
-    println str[1]
+    println arrayStage[0]
+    println arrayStage[1]
 
-    
+
+    stage('Prueba'){
+        echo 'TESTEANDO...'
+    }
+
+    /*
 
 
     stage('Build & Test'){
@@ -34,6 +39,7 @@ def call(){
     stage('Nexus'){
         nexusPublisher nexusInstanceId: 'Nexus_server_local', nexusRepositoryId: 'test-repo', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: 'jar', filePath: '/var/lib/jenkins/workspace/example_choice/build/libs/DevOpsUsach2020-0.0.1.jar']], mavenCoordinate: [artifactId: 'DevOpsUsach2020', groupId: 'com.devopsusach2020', packaging: 'jar', version: '1.0.2.gradle']]]
     }
+    */
 
 }
 
