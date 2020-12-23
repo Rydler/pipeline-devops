@@ -7,7 +7,7 @@ def validarStages(validStage,arrayStage){
     for (String validValues: validStage){
         for (String values: arrayStage){
             if (values == validValues){
-                aux += 1
+                println "Prueba"
             }
         }
     }
