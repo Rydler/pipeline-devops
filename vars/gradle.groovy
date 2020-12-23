@@ -8,6 +8,8 @@ def call(){
 
     for(String values : arrayStage){
         println 'IMPRIMIENDO'
+
+
     }
 
     stage('Prueba'){
