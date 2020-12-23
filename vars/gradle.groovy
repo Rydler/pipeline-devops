@@ -3,6 +3,14 @@ def ejecucion = load 'gradle.groovy'
 ejecucion.call()
 */
 def call(){
+
+    def arrayStage =  params.stage.split(';')
+    println str[0]
+    println str[1]
+
+    
+
+
     stage('Build & Test'){
         sh './gradlew clean build'
     }

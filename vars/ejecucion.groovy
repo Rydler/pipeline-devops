@@ -18,24 +18,12 @@ def call(){
                         println 'Herramienta de ejecución: ' + params.eleccion
                         echo "Stage: ${params.stage}"
 
-                        def str =  params.stage.split(';')
-                        println str[0]
-                        println str[1]
-
-                        /*if (params.stage == '') {
-                            println 'INICIO'
-                            
-                            println 'FIN'
-                        }
-                        */
-
-                      /*  
                         if (params.eleccion == 'gradle'){
                             gradle.call()
                         } else{
                             maven.call()
                         }
-                    */
+
                     }
                 }
             }
