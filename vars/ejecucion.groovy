@@ -19,7 +19,7 @@ def call(){
                         echo "Stage: ${params.stage}"
 
                         def str =  params.stage.split(';')
-                        println str(1)
+                        println str[1]
 
                         /*if (params.stage == '') {
                             println 'INICIO'
