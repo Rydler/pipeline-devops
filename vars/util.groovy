@@ -8,6 +8,7 @@ def validarStages(validStage,arrayStage){
         for (String values: arrayStage){
             if (values == validValues){
                 aux += 1
+                println "Entre al IF"
                 println(aux)
             }
         }
