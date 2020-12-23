@@ -6,6 +6,8 @@ def call(){
 
     def arrayStage =  params.stage.split(';')
 
+    println " VALOR: ${params.stage}" 
+
     for(String values : arrayStage){
 
 
