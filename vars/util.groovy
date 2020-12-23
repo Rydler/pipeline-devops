@@ -1,15 +1,20 @@
 
 def validarStages(validStage,arrayStage){
     
-    def aux = false
+    def check = false
+    def aux = 0
+
     for (String validValues: validStage){
         for (String values: arrayStage){
             if (values == validValues){
-                aux = true
+                aux ++
             }
         }
     }
-    return aux
+    if (aux == arrayStage.size){
+        check = true
+    }
+    return check
 }
 
 
