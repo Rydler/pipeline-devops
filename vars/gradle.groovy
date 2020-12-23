@@ -8,6 +8,9 @@ def call(){
     println arrayStage[0]
     println arrayStage[1]
 
+    for(String values : arrayStage){
+        println 'IMPRIMIENDO'
+    }
 
     stage('Prueba'){
         echo 'TESTEANDO...'
