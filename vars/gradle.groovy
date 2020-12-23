@@ -10,8 +10,10 @@ def call(){
         println 'IMPRIMIENDO'
 
         switch(values){
-            case '':
-            println 'VACIO'
+            case 'Build':
+            stage('Build & Test'){
+                sh './gradlew clean build'
+            }
             break
 
             case 'esto':
@@ -31,7 +33,7 @@ def call(){
     /*
 
 
-    stage('Build & Test'){
+    stage('Build'){
         sh './gradlew clean build'
     }
 
