@@ -13,8 +13,8 @@ def validarStages(validStage,arrayStage){
             }
         }
     }
-    //println arrayStage.size()
-    if (aux == arrayStage.size){
+    println arrayStage.size()
+    if (aux == arrayStage.size()){
         check = true
     }
     return check
