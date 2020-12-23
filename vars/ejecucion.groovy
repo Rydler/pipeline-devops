@@ -1,6 +1,6 @@
 def call(){
 
-    String[] = str;
+    
     pipeline {
         agent any
         parameters { 
@@ -18,9 +18,7 @@ def call(){
                         println 'Herramienta de ejecución: ' + params.eleccion
                         echo "Stage: ${params.stage}"
 
-                        str = params.stage.split(';');
-                        for( String values : str )
-                        println(values);
+                        println params.stage
 
 
                         /*if (params.stage == '') {
