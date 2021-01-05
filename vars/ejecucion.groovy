@@ -9,25 +9,6 @@ def call(){
         //}
             
         stages {
-            stage('Pipeline') {
-                steps{
-                    script{
-                        echo "DENTRO DEL PIPELINE"
-                        /*
-                       // println 'Stage a ejecutar': + params.stage
-                        println 'Herramienta de ejecución: ' + params.eleccion
-                        echo "Stage: ${params.stage}"
-
-                        if (params.eleccion == 'gradle'){
-                            gradle.call()
-                        } else{
-                            maven.call()
-                        }
-                        */
-                    }
-                }
-            }
-
 
             stage('Branch feature') {
                 when {
@@ -38,7 +19,7 @@ def call(){
 
                         echo "NOMBRE RAMA: ${BRANCH_NAME}"
                         // INTEGRACION CONTINUA
-                        //ci.call() 
+                        ci.call() 
                     }
                 }
             }
