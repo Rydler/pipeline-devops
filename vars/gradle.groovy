@@ -10,38 +10,7 @@ def call(){
     */
 
     //def check = util.validarStages(validStage,arrayStage)
-    pipeline{
-
-        stage('Branch feature') {
-            when {
-                branch 'feature-*'
-            }    
-            steps{
-                script{
-
-                    echo "NOMBRE RAMA: ${BRANCH_NAME}"
-                    // INTEGRACION CONTINUA
-                    //ci.call() 
-                }
-            }
-        }
-
-        stage('Branch develop') {
-            when {
-                branch 'develop'
-            }    
-            steps{
-                script{
-
-                    echo "NOMBRE RAMA: ${BRANCH_NAME}"
-                    // INTEGRACION CONTINUA
-                    //ci.call() 
-                }
-            }
-        }
-    }
-
-    /*
+    
 
     if ("${params.stage}" == ''){
 
@@ -114,7 +83,7 @@ def call(){
     else{
         error "Hay al menos un Stage no valido"
     }
-    */
+    
 }
 
 return this;
