@@ -56,6 +56,20 @@ def call(){
                     }
                 }
             }
+
+            stage('Branch release') {
+                when {
+                    branch 'release-*'
+                }    
+                steps{
+                    script{
+
+                        echo "NOMBRE RAMA: ${BRANCH_NAME}"
+                        // INTEGRACION CONTINUA
+                        //ci.call() 
+                    }
+                }
+            }
         }
 
         post {
