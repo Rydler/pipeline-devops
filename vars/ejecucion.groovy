@@ -29,7 +29,7 @@ def call(){
             }
 
 
-            stage('Branch Feature') {
+            stage('Branch feature') {
                 when {
                     branch 'feature-*'
                 }    
@@ -43,7 +43,7 @@ def call(){
                 }
             }
 
-            stage('Branch Feature') {
+            stage('Branch developer') {
                 when {
                     branch 'develop'
                 }    
