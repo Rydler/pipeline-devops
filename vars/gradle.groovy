@@ -10,35 +10,36 @@ def call(){
     */
 
     //def check = util.validarStages(validStage,arrayStage)
+    pipeline{
 
-    stage('Branch feature') {
-        when {
-            branch 'feature-*'
-        }    
-        steps{
-            script{
+        stage('Branch feature') {
+            when {
+                branch 'feature-*'
+            }    
+            steps{
+                script{
 
-                echo "NOMBRE RAMA: ${BRANCH_NAME}"
-                // INTEGRACION CONTINUA
-                //ci.call() 
+                    echo "NOMBRE RAMA: ${BRANCH_NAME}"
+                    // INTEGRACION CONTINUA
+                    //ci.call() 
+                }
+            }
+        }
+
+        stage('Branch develop') {
+            when {
+                branch 'develop'
+            }    
+            steps{
+                script{
+
+                    echo "NOMBRE RAMA: ${BRANCH_NAME}"
+                    // INTEGRACION CONTINUA
+                    //ci.call() 
+                }
             }
         }
     }
-
-     stage('Branch develop') {
-        when {
-            branch 'develop'
-        }    
-        steps{
-            script{
-
-                echo "NOMBRE RAMA: ${BRANCH_NAME}"
-                // INTEGRACION CONTINUA
-                //ci.call() 
-            }
-        }
-    }
-    
 
     /*
 
