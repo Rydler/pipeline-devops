@@ -1,7 +1,7 @@
 def call(){
 
-    def validStage = ['Build', 'Sonar', 'Run', 'Test', 'Nexus']
-    def arrayStage =  params.stage.split(';')
+    //def validStage = ['Build', 'Sonar', 'Run', 'Test', 'Nexus']
+    //def arrayStage =  params.stage.split(';')
 
     /*
     Llamar a una funcion que valide si los parametros del array son validos y retorne un boolean.
@@ -9,7 +9,38 @@ def call(){
     Out: Boolean
     */
 
-    def check = util.validarStages(validStage,arrayStage)
+    //def check = util.validarStages(validStage,arrayStage)
+
+    stage('Branch feature') {
+        when {
+            branch 'feature-*'
+        }    
+        steps{
+            script{
+
+                echo "NOMBRE RAMA: ${BRANCH_NAME}"
+                // INTEGRACION CONTINUA
+                //ci.call() 
+            }
+        }
+    }
+
+     stage('Branch develop') {
+        when {
+            branch 'develop'
+        }    
+        steps{
+            script{
+
+                echo "NOMBRE RAMA: ${BRANCH_NAME}"
+                // INTEGRACION CONTINUA
+                //ci.call() 
+            }
+        }
+    }
+    
+
+    /*
 
     if ("${params.stage}" == ''){
 
@@ -82,6 +113,7 @@ def call(){
     else{
         error "Hay al menos un Stage no valido"
     }
+    */
 }
 
 return this;
