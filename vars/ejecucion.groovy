@@ -52,7 +52,7 @@ def call(){
 
                         echo "NOMBRE RAMA: ${BRANCH_NAME}"
                         // INTEGRACION CONTINUA
-                        //ci.call() 
+                        ci.call() 
                     }
                 }
             }
