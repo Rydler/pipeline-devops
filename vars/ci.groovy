@@ -1,17 +1,5 @@
 def call(){
 
-    //def validStage = ['Build', 'Sonar', 'Run', 'Test', 'Nexus']
-    //def arrayStage =  params.stage.split(';')
-
-    /*
-    Llamar a una funcion que valide si los parametros del array son validos y retorne un boolean.
-    IN: validStage, arrayStage
-    Out: Boolean
-    */
-
-    //def check = util.validarStages(validStage,arrayStage)
-    
-
         stage('buildAndTest'){
             sh './gradlew clean build'
         }
