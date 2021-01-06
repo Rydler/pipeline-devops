@@ -44,7 +44,7 @@ def call(){
                 }    
                 steps{
                     script{
-
+                        sh 'env'
                         echo "NOMBRE RAMA: ${BRANCH_NAME}"
                         // INTEGRACION CONTINUA
                         cd.call() 
