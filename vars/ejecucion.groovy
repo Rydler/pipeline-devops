@@ -49,7 +49,7 @@ def call(){
 
             stage('Branch release') {
                 when {
-                    branch 'origin/release-*'
+                    branch 'release*'
                 }    
                 steps{
                     script{
