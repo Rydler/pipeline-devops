@@ -25,7 +25,7 @@ def call(){
                 steps{
                     script{
                         figlet params.eleccion
-                        // INTEGRACION CONTINUA
+                        figlet 'INTEGRACION CONTINUA'
                         ci.call() 
                     }
                 }
@@ -38,7 +38,7 @@ def call(){
                 steps{
                     script{
                         figlet params.eleccion
-                        // INTEGRACION CONTINUA
+                        figlet 'INTEGRACION CONTINUA'
                         ci.call() 
                     }
                 }
@@ -51,7 +51,7 @@ def call(){
                 steps{
                     script{
                         figlet params.eleccion
-                        // INTEGRACION CONTINUA
+                        figlet 'DESPLIEGUE CONTINUO'
                         cd.call() 
                     }
                 }
