@@ -10,6 +10,15 @@ def call(){
             
         stages {
             
+
+            stage('Variables'){
+                steps{
+                    script{
+                        sh 'env'
+                    }    
+                }
+            }
+            
             stage('Branch feature') {
                 when {
                     branch 'feature-*'
