@@ -3,14 +3,13 @@ def call(){
     
     pipeline {
         agent any
-        //parameters { 
-            //choice(name: 'eleccion', choices: ['gradle', 'maven'], description: 'Invocacion ')
+        parameters { 
+            choice(name: 'eleccion', choices: ['gradle'], description: 'Invocacion ')
             //string(name: 'stage', defaultValue: '', description: 'Stage a ejecutar') 
-        //}
+        }
             
         stages {
             
-
             stage('Variables'){
                 steps{
                     script{
@@ -25,8 +24,7 @@ def call(){
                 }    
                 steps{
                     script{
-
-                        echo "NOMBRE RAMA: ${BRANCH_NAME}"
+                        figlet params.eleccion
                         // INTEGRACION CONTINUA
                         ci.call() 
                     }
@@ -39,8 +37,7 @@ def call(){
                 }    
                 steps{
                     script{
-
-                        echo "NOMBRE RAMA: ${BRANCH_NAME}"
+                        figlet params.eleccion
                         // INTEGRACION CONTINUA
                         ci.call() 
                     }
@@ -53,8 +50,7 @@ def call(){
                 }    
                 steps{
                     script{
-                        
-                        //echo "NOMBRE RAMA: ${BRANCH_NAME}"
+                        figlet params.eleccion
                         // INTEGRACION CONTINUA
                         cd.call() 
                     }
