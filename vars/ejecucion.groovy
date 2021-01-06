@@ -9,7 +9,7 @@ def call(){
         //}
             
         stages {
-
+            echo "RAMA: ${BRANCH_NAME}"
             stage('Branch feature') {
                 when {
                     branch 'feature-*'
